@@ -4,44 +4,47 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
-    
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ajustado para ocupar la altura completa de la ventana */
 }
+
 .App {
     text-align: center;
-    
+    padding: 20px; /* Añadido espaciado para mejorar el aspecto en dispositivos más pequeños */
 }
 
 .ribbon {
-    --s: 1.8em; /* the ribbon size */
-    --d: .6em;  /* the depth */
-    --c: .8em;  /* the cutout part */
-    
+    --s: 1.8em;
+    --d: .6em;
+    --c: .8em;
     padding: 0 calc(var(--s) + 2*var(--d) + .5em) var(--d);
     line-height: 1.8;
     background: 
-      linear-gradient(90deg,#0004 var(--d),#0000 0 calc(100% - var(--d)),#0004 0) 
-       50% 0/calc(100% - 2*(var(--s) + var(--d))) calc(100% - var(--d)),
-      conic-gradient(from 135deg at 50% -50%,#0004 25%,#0008 0)
-       var(--s)              100%/calc(3*var(--d)) var(--d),
-      conic-gradient(from 135deg at 50% -50%,#0004 25%,#0008 0)
-       calc(100% - var(--s)) 100%/calc(3*var(--d)) var(--d);
+        linear-gradient(90deg, #0004 var(--d), #0000 0 calc(100% - var(--d)), #0004 0) 
+        50% 0/calc(100% - 2*(var(--s) + var(--d))) calc(100% - var(--d)),
+        conic-gradient(from 135deg at 50% -50%, #0004 25%, #0008 0)
+        var(--s) 100%/calc(3*var(--d)) var(--d),
+        conic-gradient(from 135deg at 50% -50%, #0004 25%, #0008 0)
+        calc(100% - var(--s)) 100%/calc(3*var(--d)) var(--d);
     background-repeat: no-repeat;
-    background-color: #00A9FF; /* the main color */
-    clip-path: polygon(0 0,calc(var(--s) + var(--d)) 0,calc(var(--s) + var(--d)) var(--d),calc(var(--s) + 2*var(--d)) var(--d),calc(var(--s) + 2*var(--d)) 0,calc(100% - var(--s) - 2*var(--d)) 0,calc(100% - var(--s) - 2*var(--d)) var(--d),calc(100% - var(--s) - var(--d)) var(--d),calc(100% - var(--s) - var(--d)) 0,100% 0,calc(100% - var(--c)) calc(50% - var(--d)/2),100% calc(100% - var(--d)),calc(100% - var(--s)) calc(100% - var(--d)),calc(100% - var(--s)) 100%,calc(100% - var(--s) - 3*var(--d)) 100%,calc(100% - var(--s) - 3*var(--d)) calc(100% - var(--d)),calc(var(--s) + 3*var(--d)) calc(100% - var(--d)),calc(var(--s) + 3*var(--d)) 100%,var(--s) 100%,var(--s) calc(100% - var(--d)),0 calc(100% - var(--d)),var(--c) calc(50% - var(--d)/2));
+    background-color: #00A9FF;
+    clip-path: polygon(0 0, calc(var(--s) + var(--d)) 0, calc(var(--s) + var(--d)) var(--d), calc(var(--s) + 2*var(--d)) var(--d), calc(var(--s) + 2*var(--d)) 0, calc(100% - var(--s) - 2*var(--d)) 0, calc(100% - var(--s) - 2*var(--d)) var(--d), calc(100% - var(--s) - var(--d)) var(--d), calc(100% - var(--s) - var(--d)) 0, 100% 0, calc(100% - var(--c)) calc(50% - var(--d)/2), 100% calc(100% - var(--d)), calc(100% - var(--s)) calc(100% - var(--d)), calc(100% - var(--s)) 100%, calc(100% - var(--s) - 3*var(--d)) 100%, calc(100% - var(--s) - 3*var(--d)) calc(100% - var(--d)), calc(var(--s) + 3*var(--d)) calc(100% - var(--d)), calc(var(--s) + 3*var(--d)) 100%, var(--s) 100%, var(--s) calc(100% - var(--d)), 0 calc(100% - var(--d)), var(--c) calc(50% - var(--d)/2));
     width: fit-content;
     user-select: none;
-  }
-
-
+    margin: 0 auto; /* Centra el ribbon en el contenedor */
+}
 
 .input-group {
-    width: 60%;
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho del contenedor */
+    max-width: 400px; /* Añadido un ancho máximo */
+    margin: 0 auto; /* Centra el input-group */
 }
 
 .card {
-    max-width: 62%;
+    max-width: 100%; /* Cambiado a 100% para ocupar todo el ancho del contenedor */
 }
 
 .no-select {
     user-select: none;
-  }
+}
